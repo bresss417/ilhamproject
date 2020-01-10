@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            About
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <h2 class="text">เพิ่ม อาชีพ ของคุณ</h2>
+        <ion-item no-lines>
+            <img [src]="camera64" *ngIf="camera64" [(ngModel)]="postdata.photo">
+
+            <ion-item no-lines class="button-click">
+                <button ion-button (click)="openGalery()">Galery</button>
+                <button ion-button (click)="openCamera()">Photo</button>
+            </ion-item>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-label>ชื่อ-นามสกุล</ion-label>
+            <ion-input type="text" [(ngModel)]="postdata.name"></ion-input>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-label>ที่อยู่</ion-label>
+            <ion-select [(ngModel)]="postdata.city" multiple="">
+                <ion-option value="pattani">ปัตตานี</ion-option>
+                <ion-option value="yala">ยะลา</ion-option>
+                <ion-option value="songgla">สงขลา</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-label>เบอร์โทร</ion-label>
+            <ion-input type="text" [(ngModel)]="postdata.call"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label> เพื่ม ตำแหน่ง-อาชีพ </ion-label>
+            <!-- <ion-select [(ngModel)]="postdata.career" multiple="">
+                <ion-option value="pattani" [(ngModel)]="postdata.career">ช่างซ่อมรถยนต์</ion-option>
+                <ion-option value="yala" [(ngModel)]="postdata.career">ช่างก่อสร้าง</ion-option>
+                <ion-option value="songgla" [(ngModel)]="postdata.career">ช่างอิเล็ก</ion-option>
+                <ion-option value="songgla" [(ngModel)]="postdata.career">ช่างไฟฟ้า</ion-option>
+                <ion-option value="songgla" [(ngModel)]="postdata.career">ช่างประปา</ion-option>
+                <ion-option value="songgla" [(ngModel)]="postdata.career">ช่างภาพ</ion-option>
+            </ion-select> -->
+            <ion-select [(ngModel)]="postdata.career" multiple="">
+                <ion-option value="car">ช่างซ่อมรถยนต์</ion-option>
+                <ion-option value="home">ช่างก่อสร้าง</ion-option>
+                <ion-option value="iot">ช่างอิเล็ก</ion-option>
+                <ion-option value="flack">ช่างไฟฟ้า</ion-option>
+                <ion-option value="warter">ช่างประปา</ion-option>
+                <ion-option value="image">ช่างภาพ</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+                    <button ion-button block (click)="save()">Save profile</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+</ion-content>

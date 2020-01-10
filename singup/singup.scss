@@ -1,0 +1,45 @@
+page-singup {
+    #block-body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 3px solid #f1f1f1;
+        list-style: none;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .text-head {
+        text-align: center;
+        font-size: 35px;
+        font-weight: bolder;
+        color: deepskyblue;
+    }
+    ion-item {
+        width: auto;
+        padding: 10px;
+        margin: 24px 0 12px 0;
+        list-style: none;
+    }
+    ion-input[type=text],
+    ion-input[type=password] {
+        width: 100%;
+        padding: 8px 25px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    .tex-flex {
+        text-align: center;
+        font-size: 20px;
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-top: 1px;
+        border: none;
+    }
+}
